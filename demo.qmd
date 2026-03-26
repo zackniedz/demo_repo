@@ -1,0 +1,27 @@
+---
+title: "demo_code"
+format: html
+editor: visual
+---
+
+I wrote this code to work with the "nycflights" data
+
+```{r}
+library(tidyverse)
+library(nycflights13)
+
+flights |> 
+  filter(dest == "IAH") |> 
+  mutate(speed = distance / air_time * 60) |> 
+  select(year:day, dep_time, carrier, flight, speed) |> 
+  arrange(desc(speed))
+
+fast_flights = flights |> 
+  filter(dest == "IAH") |> 
+  mutate(speed = distance / air_time * 60) |> 
+  select(year:day, dep_time, carrier, flight, speed) |> 
+  arrange(desc(speed))
+
+-
+```
+
