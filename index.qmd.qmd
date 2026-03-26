@@ -4,7 +4,7 @@ format: html
 editor: visual
 ---
 
-I wrote this code to work with the "nycflights" data
+I wrote this code to work with the "nycflights" data 
 
 ```{r}
 library(tidyverse)
